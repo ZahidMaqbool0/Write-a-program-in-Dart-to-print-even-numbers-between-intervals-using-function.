@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+// Starting Main Function
 main(){
 
   print('print even numbers between intervals');
@@ -10,27 +11,23 @@ main(){
   print('Enter Ending number');
   int endingNumber = int.tryParse(stdin.readLineSync() ?? '20') ?? 20;
 
-  findEven(int startingNumber, int endingNumber){
-    if(startingNumber > endingNumber){
-      int tempnumber = startingNumber;
-      startingNumber = endingNumber;
-      endingNumber = tempnumber;
-      for(int i=startingNumber; i<=endingNumber; i++){
-        if(i % 2 == 0){
-          print(i);
-        }
-      }
-    }
-    for(int i=startingNumber; i<=endingNumber; i++){
-      if(i % 2 == 0){
-        print(i);
-      }
-    }
-
-  }
-
   findEven(startingNumber, endingNumber);
 
   print('Program End.....!');
+
+}
+
+// Sart Function => FindEven
+findEven(int startingNumber, int endingNumber){
+  if(startingNumber > endingNumber){
+    int tempnumber = startingNumber;
+    startingNumber = endingNumber;
+    endingNumber = tempnumber;
+  }
+  for(int i=startingNumber; i<=endingNumber; i++){
+    if(i % 2 == 0){
+      print(i);
+    }
+  }
 
 }
